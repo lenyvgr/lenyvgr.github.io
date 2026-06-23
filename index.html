@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Leny Vergier — Portfolio BTS SIO SISR</title>
+    <meta name="description" content="Portfolio de Leny Vergier — BTS SIO Option SISR, administrateur systèmes & réseaux" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <span class="nav__logo">LV<span class="accent">.</span></span>
+        <ul class="nav__links">
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#synthese">Tableau de synthèse</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav__burger" aria-label="Menu" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+      <div class="hero__bg"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow"><span class="mono">&gt;_</span> BTS SIO · Option SISR</p>
+        <h1 class="hero__name">Leny<br><span class="accent">Vergier</span><span class="cursor">|</span></h1>
+        <p class="hero__sub">Administrateur systèmes &amp; réseaux<br>Infrastructure · Virtualisation · Cybersécurité</p>
+        <div class="hero__ctas">
+          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        </div>
+        <div class="hero__scroll">
+          <span class="mono" style="color:var(--muted);font-size:.8rem;">scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </div>
+      <div class="hero__terminal">
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">vergier@ipssi ~ </span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="t-prompt">$</span> whoami</p>
+            <p class="t-out">Leny Vergier — BTS SIO SISR</p>
+            <p><span class="t-prompt">$</span> cat competences.txt</p>
+            <p class="t-out">Windows Server · Linux · Active Directory</p>
+            <p class="t-out">Cisco · Proxmox · VMware · UniFi</p>
+            <p class="t-out">Réseaux TCP/IP · VLAN · VPN · Firewall</p>
+            <p><span class="t-prompt">$</span> echo $STATUS</p>
+            <p class="t-out accent">Disponible pour alternance 2026–2027</p>
+            <p><span class="t-prompt">$</span> <span class="blink">_</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+
+      <!-- À PROPOS -->
+      <section id="apropos" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">01</span>
+            <h2 class="section__title">À propos</h2>
+          </div>
+          <div class="about__grid">
+            <div class="about__text">
+              <p class="lead">Étudiant en BTS SIO option SISR à l'IPSSI Val d'Europe, je me spécialise dans l'administration des infrastructures systèmes et réseaux.</p>
+              <p>Passionné par les environnements de production réels, je construis et gère un homelab complet incluant des serveurs HP ProLiant, un cluster Proxmox, et une infrastructure réseau UniFi. Cette approche pratique me permet d'aborder les problématiques terrain avec une réelle expérience technique.</p>
+              <p>Je recherche une alternance pour approfondir mes compétences dans un environnement professionnel stimulant.</p>
+            </div>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__num">2</span>
+                <span class="stat__label">ans de formation</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">4+</span>
+                <span class="stat__label">projets réalisés</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">SISR</span>
+                <span class="stat__label">option spécialisée</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">2</span>
+                <span class="stat__label">certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPÉTENCES -->
+      <section id="competences" class="section section--alt">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">02</span>
+            <h2 class="section__title">Compétences</h2>
+          </div>
+          <div class="skills__grid">
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <h3 class="skill-card__title">Systèmes</h3>
+              <ul class="skill-card__list">
+                <li>Windows Server 2019/2022</li>
+                <li>Active Directory & GPO</li>
+                <li>Linux (Debian, Ubuntu)</li>
+                <li>Virtualisation VMware / Proxmox</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+              </div>
+              <h3 class="skill-card__title">Réseaux</h3>
+              <ul class="skill-card__list">
+                <li>TCP/IP, VLAN, routage</li>
+                <li>Cisco IOS (Packet Tracer)</li>
+                <li>OSPF, EIGRP, HSRP</li>
+                <li>UniFi, Enterasys</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="skill-card__title">Sécurité & Conformité</h3>
+              <ul class="skill-card__list">
+                <li>ACL, pare-feu</li>
+                <li>RGPD / CNIL (certifié)</li>
+                <li>AAA / TACACS+</li>
+                <li>VPN, SSH</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-card__title">Automatisation & Scripting</h3>
+              <ul class="skill-card__list">
+                <li>Bash / Shell scripting</li>
+                <li>PowerShell (AD, GPO)</li>
+                <li>Git & GitHub Pages</li>
+                <li>Tailscale (accès distant VPN)</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3 class="skill-card__title">Stockage & Backup</h3>
+              <ul class="skill-card__list">
+                <li>RAID (VROC, RAID 5)</li>
+                <li>Proxmox Backup Server</li>
+                <li>Ceph (notions)</li>
+                <li>iLO / BMC</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <h3 class="skill-card__title">Soft skills</h3>
+              <ul class="skill-card__list">
+                <li>Travail en équipe</li>
+                <li>Gestion de projet</li>
+                <li>Autonomie & initiative</li>
+                <li>Communication technique</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETS -->
+      <section id="projets" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">03</span>
+            <h2 class="section__title">Projets sélectionnés</h2>
+          </div>
+          <div class="projects">
+
+            <article class="project-card">
+              <div class="project-card__num mono">01</div>
+              <div class="project-card__content">
+                <div class="project-card__head">
+                  <h3>Déploiement d'un cluster de virtualisation Proxmox VE</h3>
+                  <div class="project-card__tags">
+                    <span class="tag">Proxmox VE</span>
+                    <span class="tag">HP ProLiant</span>
+                    <span class="tag">KVM</span>
+                    <span class="tag">LVM</span>
+                  </div>
+                </div>
+                <p>Mise en place d'un cluster Proxmox VE haute disponibilité sur serveurs HP ProLiant DL360 Gen9. Configuration du stockage partagé, création de templates de VMs et de conteneurs LXC, gestion des ressources et des pools.</p>
+                <ul class="project-card__bullets">
+                  <li>Installation et configuration du cluster multi-nœuds avec Corosync</li>
+                  <li>Provisionnement de machines virtuelles Windows Server 2022 et Debian</li>
+                  <li>Mise en place de sauvegardes automatisées via Proxmox Backup Server</li>
+                  <li>Configuration du stockage RAID 5 via Intel VROC sur les nœuds</li>
+                </ul>
+                <span class="project-card__role">Rôle : Administrateur infrastructure</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__num mono">02</div>
+              <div class="project-card__content">
+                <div class="project-card__head">
+                  <h3>Déploiement et intégration de HashiCorp Vault</h3>
+                  <div class="project-card__tags">
+                    <span class="tag">Vault</span>
+                    <span class="tag">Secrets Management</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">TLS</span>
+                  </div>
+                </div>
+                <p>Installation et configuration de HashiCorp Vault sur un conteneur LXC Debian dédié au sein de l'infrastructure Proxmox. Mise en place de la gestion centralisée des secrets et des certificats pour les services internes.</p>
+                <ul class="project-card__bullets">
+                  <li>Déploiement de Vault en mode standalone avec stockage fichier</li>
+                  <li>Configuration des politiques d'accès (ACL) par service</li>
+                  <li>Intégration des secrets dans les configurations des VMs du cluster</li>
+                  <li>Mise en place du chiffrement des données sensibles au repos</li>
+                </ul>
+                <span class="project-card__role">Rôle : Administrateur systèmes & sécurité</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__num mono">03</div>
+              <div class="project-card__content">
+                <div class="project-card__head">
+                  <h3>Supervision d'infrastructure avec tableau de bord centralisé</h3>
+                  <div class="project-card__tags">
+                    <span class="tag">Monitoring</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">SNMP</span>
+                    <span class="tag">Proxmox API</span>
+                  </div>
+                </div>
+                <p>Mise en place d'une solution de supervision pour l'ensemble des serveurs et équipements réseau de l'infrastructure. Centralisation des métriques (CPU, RAM, stockage, disponibilité) dans un tableau de bord temps réel.</p>
+                <ul class="project-card__bullets">
+                  <li>Collecte des métriques via l'API Proxmox et SNMPv3 sur les équipements réseau</li>
+                  <li>Création de dashboards par environnement (hyperviseurs, switches, routeurs)</li>
+                  <li>Configuration des alertes et seuils de notification</li>
+                  <li>Documentation des indicateurs clés et procédures d'escalade</li>
+                </ul>
+                <span class="project-card__role">Rôle : Administrateur systèmes & réseaux</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__num mono">04</div>
+              <div class="project-card__content">
+                <div class="project-card__head">
+                  <h3>Intégration d'une baie serveur dans l'infrastructure réseau</h3>
+                  <div class="project-card__tags">
+                    <span class="tag">Cisco IOS</span>
+                    <span class="tag">Enterasys</span>
+                    <span class="tag">VLAN</span>
+                    <span class="tag">STP</span>
+                    <span class="tag">UniFi</span>
+                  </div>
+                </div>
+                <p>Configuration et intégration d'un switch manageable pour raccorder une baie de serveurs à l'infrastructure réseau existante. Segmentation VLAN, paramétrage du spanning-tree et sécurisation des ports.</p>
+                <ul class="project-card__bullets">
+                  <li>Configuration des VLANs (serveurs, administration, iLO/BMC) et des ports trunk</li>
+                  <li>Paramétrage RSTP pour éviter les boucles réseau</li>
+                  <li>Sécurisation des ports (Port Security, désactivation des ports inutilisés)</li>
+                  <li>Intégration dans la topologie UniFi existante et documentation du câblage</li>
+                </ul>
+                <span class="project-card__role">Rôle : Technicien réseau & infrastructure</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TABLEAU DE SYNTHÈSE -->
+      <section id="synthese" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">04</span>
+            <h2 class="section__title">Tableau de synthèse E5</h2>
+          </div>
+          <p style="color:var(--muted);margin-bottom:2rem;font-size:.95rem;">Réalisations professionnelles et compétences mises en œuvre, en formation initiale et en milieu professionnel — BTS SIO SESSION 2026.</p>
+
+          <!-- Formation initiale -->
+          <div class="synth-group">
+            <div class="synth-group__label">
+              <span class="mono accent" style="font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;">Formation initiale</span>
+            </div>
+            <div class="synth-table-wrap">
+              <table class="synth-table">
+                <thead>
+                  <tr>
+                    <th class="col-realisation">Réalisation professionnelle</th>
+                    <th class="col-badge" title="Gérer le patrimoine informatique">B1</th>
+                    <th class="col-badge" title="Répondre aux incidents et aux demandes d'assistance et d'évolution">B2</th>
+                    <th class="col-badge" title="Développer la présence en ligne de l'organisation">B3</th>
+                    <th class="col-badge" title="Travailler en mode projet">B4</th>
+                    <th class="col-badge" title="Mettre à disposition des utilisateurs un service informatique">B5</th>
+                    <th class="col-badge" title="Organiser son développement professionnel">B6</th>
+                  </tr>
+                  <tr class="synth-table__legend">
+                    <td></td>
+                    <td>Patrimoine SI</td>
+                    <td>Incidents & demandes</td>
+                    <td>Présence en ligne</td>
+                    <td>Mode projet</td>
+                    <td>Mise à disposition service</td>
+                    <td>Développement pro</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mise en place d'un serveur Windows en machine virtuelle avec configuration des services réseau</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Création d'un réseau LAN de simulation et mise en place d'un environnement GLPI</td>
+                    <td class="check">✓</td><td class="check">✓</td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Configuration des services DNS et DHCP</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Mise en place d'une autorité de certification (PKI)</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Travaux pratiques Cisco Packet Tracer : RIP, OSPF, SSH, Port-security, DHCP Snooping, RADIUS, Syslog, NTP</td>
+                    <td class="check">✓</td><td class="check">✓</td><td></td><td></td><td></td><td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Milieu professionnel 1ère année -->
+          <div class="synth-group" style="margin-top:2rem;">
+            <div class="synth-group__label">
+              <span class="mono accent" style="font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;">Milieu professionnel — 1<sup>ère</sup> année</span>
+            </div>
+            <div class="synth-table-wrap">
+              <table class="synth-table">
+                <thead>
+                  <tr>
+                    <th class="col-realisation">Réalisation professionnelle</th>
+                    <th class="col-badge" title="Gérer le patrimoine informatique">B1</th>
+                    <th class="col-badge" title="Répondre aux incidents et aux demandes d'assistance et d'évolution">B2</th>
+                    <th class="col-badge" title="Développer la présence en ligne de l'organisation">B3</th>
+                    <th class="col-badge" title="Travailler en mode projet">B4</th>
+                    <th class="col-badge" title="Mettre à disposition des utilisateurs un service informatique">B5</th>
+                    <th class="col-badge" title="Organiser son développement professionnel">B6</th>
+                  </tr>
+                  <tr class="synth-table__legend">
+                    <td></td>
+                    <td>Patrimoine SI</td>
+                    <td>Incidents & demandes</td>
+                    <td>Présence en ligne</td>
+                    <td>Mode projet</td>
+                    <td>Mise à disposition service</td>
+                    <td>Développement pro</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gestion du parc informatique : installation de serveurs sous Proxmox, configuration de switchs et gestion des comptes utilisateurs</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Traitement des incidents matériels : suivi SAV, reconditionnement de laptops et résolution de problèmes utilisateurs</td>
+                    <td></td><td class="check">✓</td><td></td><td></td><td></td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Mise en place et résolution des accès distants aux serveurs pour les utilisateurs en télétravail</td>
+                    <td></td><td class="check">✓</td><td></td><td></td><td class="check">✓</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Projet de refonte de l'infrastructure réseau et intégration de nouveaux serveurs dans l'environnement existant</td>
+                    <td class="check">✓</td><td class="check">✓</td><td></td><td class="check">✓</td><td></td><td></td>
+                  </tr>
+                  <tr>
+                    <td>Déploiement de services en conteneurs sur Proxmox : Vault, supervision des serveurs et Bastion avec Ansible et Terraform</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td class="check">✓</td><td class="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Développement professionnel : apprentissage de protocoles réseau de routage (EIGRP, IS-IS)</td>
+                    <td class="check">✓</td><td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="synth-legend">
+            <p class="synth-legend__title mono" style="font-size:.75rem;color:var(--muted);margin-bottom:.75rem;">Légende des blocs de compétences</p>
+            <div class="synth-legend__grid">
+              <span><strong class="accent">B1</strong> Gérer le patrimoine informatique</span>
+              <span><strong class="accent">B2</strong> Répondre aux incidents et aux demandes</span>
+              <span><strong class="accent">B3</strong> Développer la présence en ligne</span>
+              <span><strong class="accent">B4</strong> Travailler en mode projet</span>
+              <span><strong class="accent">B5</strong> Mettre à disposition un service informatique</span>
+              <span><strong class="accent">B6</strong> Organiser son développement professionnel</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMATION -->
+      <section id="formation" class="section section--alt">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">05</span>
+            <h2 class="section__title">Formation</h2>
+          </div>
+          <div class="timeline">
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date mono">2025 — 2027</span>
+                <h3 class="timeline__title">BTS Services Informatiques aux Organisations</h3>
+                <p class="timeline__sub">Option SISR — Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                <p class="timeline__school">IPSSI Val d'Europe — Marne-la-Vallée</p>
+                <ul class="timeline__details">
+                  <li>Administration Windows Server, Active Directory & GPO</li>
+                  <li>Réseaux Cisco, protocoles de routage avancés (OSPF, EIGRP, HSRP)</li>
+                  <li>Virtualisation Proxmox VE / VMware Workstation</li>
+                  <li>Cybersécurité, gestion des accès et conformité réglementaire</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date mono">2026</span>
+                <h3 class="timeline__title">Certification CNIL</h3>
+                <p class="timeline__sub">Score obtenu : 100%</p>
+                <p class="timeline__school">Commission Nationale de l'Informatique et des Libertés</p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date mono">2026</span>
+                <h3 class="timeline__title">Certification ANSSI</h3>
+                <p class="timeline__school">Agence Nationale de la Sécurité des Systèmes d'Information</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag mono">06</span>
+            <h2 class="section__title">Contact</h2>
+          </div>
+          <div class="contact__grid">
+            <div class="contact__text">
+              <p class="lead">Disponible pour une alternance en administration systèmes &amp; réseaux sur la région Île-de-France à partir de 2026.</p>
+              <p>N'hésitez pas à me contacter pour discuter d'une opportunité ou d'un projet.</p>
+            </div>
+            <div class="contact__links">
+              <a href="mailto:l.vergier@ecole-ipssi.net" class="contact-link">
+                <span class="contact-link__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div>
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">l.vergier@ecole-ipssi.net</span>
+                </div>
+              </a>
+              <a href="https://lenyvgr.github.io" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </span>
+                <div>
+                  <span class="contact-link__label">GitHub</span>
+                  <span class="contact-link__value">lenyvgr.github.io</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copy">© <span id="year"></span> Leny Vergier — Portfolio BTS SIO Option SISR</p>
+        <p class="footer__made mono" style="font-size:.75rem;color:var(--muted);margin:0;">Hébergé sur GitHub Pages</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Nav scroll effect
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+      });
+
+      // Mobile burger
+      const burger = document.getElementById('burger');
+      const navLinks = document.querySelector('.nav__links');
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav__links--open');
+        burger.classList.toggle('nav__burger--open');
+      });
+
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.skill-card, .project-card, .timeline__item, .stat, .contact-link').forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
