@@ -19,6 +19,7 @@
         <ul class="nav__links">
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#competences">Compétences</a></li>
+          <li><a href="#gsb">Projet GSB</a></li>
           <li><a href="#projets">Projets</a></li>
           <li><a href="#synthese">Synthèse E5</a></li>
           <li><a href="#veille">Veille</a></li>
@@ -94,7 +95,7 @@
                 <span class="metric__label">ans de formation BTS SIO</span>
               </div>
               <div class="metric stagger-2">
-                <span class="metric__val">4+</span>
+                <span class="metric__val">5</span>
                 <span class="metric__label">projets infra réalisés</span>
               </div>
               <div class="metric stagger-3">
@@ -145,6 +146,10 @@
                 <span class="skill-tag">TCP/IP</span>
                 <span class="skill-tag">VLAN</span>
                 <span class="skill-tag">Routage</span>
+                <span class="skill-tag">RIP v2</span>
+                <span class="skill-tag">NAT / PAT</span>
+                <span class="skill-tag">DHCP Relay</span>
+                <span class="skill-tag">Packet Tracer</span>
                 <span class="skill-tag">Cisco IOS</span>
                 <span class="skill-tag">OSPF</span>
                 <span class="skill-tag">EIGRP</span>
@@ -229,10 +234,129 @@
         </div>
       </section>
 
-      <!-- PROJETS -->
-      <section id="projets" class="section section--dark">
+      <!-- PROJET GSB -->
+      <section id="gsb" class="section section--dark">
         <div class="container">
-          <p class="s-eyebrow">03 — Réalisations</p>
+          <p class="s-eyebrow">03 — Projet réseau</p>
+          <h2 class="s-title">Infrastructure réseau du laboratoire GSB</h2>
+          <p class="gsb__intro reveal">
+            Conception du réseau complet de GSB, un laboratoire pharmaceutique réparti sur <strong>6 étages</strong>, simulé sous <strong>Cisco Packet Tracer</strong>. Chaque service a son VLAN et son sous-réseau, le tout est routé, filtré par des ACL et ouvert sur Internet via NAT.
+          </p>
+          <div class="gsb__tags reveal">
+            <span class="tag tag--v">Packet Tracer</span>
+            <span class="tag tag--v">VLAN 802.1Q</span>
+            <span class="tag tag--v">VLSM</span>
+            <span class="tag tag--o">ACL</span>
+            <span class="tag tag--o">NAT / PAT</span>
+            <span class="tag tag--o">RIP v2</span>
+            <span class="tag tag--o">DHCP Relay</span>
+          </div>
+
+          <figure class="gsb-diagram reveal">
+            <svg viewBox="0 0 800 300" role="img" aria-labelledby="gsb-svg-title">
+              <title id="gsb-svg-title">Schéma simplifié : Internet, routeur R1, commutateur central et six commutateurs d'étage</title>
+
+              <path class="gsb-link" d="M120 150 H214"/>
+              <path class="gsb-link" d="M354 150 H438"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 25 640 25"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 75 640 75"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 125 640 125"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 175 640 175"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 225 640 225"/>
+              <path class="gsb-link" d="M556 150 C598 150 598 275 640 275"/>
+
+              <text class="gsb-note" x="167" y="140" text-anchor="middle">80.0.0.0/30</text>
+              <text class="gsb-note" x="396" y="140" text-anchor="middle">trunk dot1Q</text>
+
+              <rect class="gsb-node gsb-node--net" x="4" y="118" width="116" height="64" rx="10"/>
+              <text class="gsb-t" x="62" y="146" text-anchor="middle">Internet</text>
+              <text class="gsb-s" x="62" y="164" text-anchor="middle">FAI simulé</text>
+
+              <rect class="gsb-node gsb-node--router" x="214" y="112" width="140" height="76" rx="10"/>
+              <text class="gsb-t gsb-t--on" x="284" y="142" text-anchor="middle">Routeur R1</text>
+              <text class="gsb-s gsb-s--on" x="284" y="161" text-anchor="middle">NAT · RIP v2</text>
+              <text class="gsb-s gsb-s--on" x="284" y="177" text-anchor="middle">DHCP relay · ACL</text>
+
+              <rect class="gsb-node gsb-node--core" x="438" y="118" width="118" height="64" rx="10"/>
+              <text class="gsb-t" x="497" y="146" text-anchor="middle">SW Central</text>
+              <text class="gsb-s" x="497" y="164" text-anchor="middle">12 VLAN</text>
+
+              <rect class="gsb-node" x="640" y="8" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="30" text-anchor="middle">Étage 1</text>
+              <rect class="gsb-node" x="640" y="58" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="80" text-anchor="middle">Étage 2</text>
+              <rect class="gsb-node" x="640" y="108" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="130" text-anchor="middle">Étage 3</text>
+              <rect class="gsb-node" x="640" y="158" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="180" text-anchor="middle">Étage 4</text>
+              <rect class="gsb-node" x="640" y="208" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="230" text-anchor="middle">Étage 5</text>
+              <rect class="gsb-node" x="640" y="258" width="150" height="34" rx="8"/>
+              <text class="gsb-t" x="715" y="280" text-anchor="middle">Étage 6</text>
+            </svg>
+            <figcaption class="gsb-diagram__caption">Schéma simplifié. R1 route entre les VLAN sur un seul lien trunk (router-on-a-stick) et chaque étage est raccordé au commutateur central.</figcaption>
+          </figure>
+
+          <div class="gsb__cols">
+
+            <div class="reveal">
+              <p class="gsb-label">Plan d'adressage VLSM</p>
+              <div class="gsb-addr">
+                <table class="gsb-addr__table">
+                  <thead>
+                    <tr><th>VLAN</th><th>Service</th><th>Hôtes</th><th>Sous-réseau</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="gsb-addr__vlan">10</td><td>Réseau &amp; Système</td><td class="gsb-addr__num">35</td><td class="gsb-addr__net">172.16.1.0/26</td></tr>
+                    <tr><td class="gsb-addr__vlan">20</td><td>Direction / DSI</td><td class="gsb-addr__num">15</td><td class="gsb-addr__net">172.16.1.192/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">30</td><td>RH / Compta / Juridique</td><td class="gsb-addr__num">45</td><td class="gsb-addr__net">172.16.0.192/26</td></tr>
+                    <tr><td class="gsb-addr__vlan">40</td><td>Communication / Rédaction</td><td class="gsb-addr__num">20</td><td class="gsb-addr__net">172.16.1.160/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">50</td><td>Développement</td><td class="gsb-addr__num">30</td><td class="gsb-addr__net">172.16.1.64/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">60</td><td>Commercial</td><td class="gsb-addr__num">25</td><td class="gsb-addr__net">172.16.1.96/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">70</td><td>Labo-Recherche</td><td class="gsb-addr__num">25</td><td class="gsb-addr__net">172.16.1.128/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">80</td><td>Cafétéria</td><td class="gsb-addr__num">10</td><td class="gsb-addr__net">172.16.2.0/28</td></tr>
+                    <tr><td class="gsb-addr__vlan">90</td><td>Secrétariat administratif</td><td class="gsb-addr__num">50</td><td class="gsb-addr__net">172.16.0.128/26</td></tr>
+                    <tr><td class="gsb-addr__vlan">150</td><td>Visiteurs</td><td class="gsb-addr__num">60</td><td class="gsb-addr__net">172.16.0.0/26</td></tr>
+                    <tr><td class="gsb-addr__vlan">200</td><td>Démonstration</td><td class="gsb-addr__num">15</td><td class="gsb-addr__net">172.16.1.224/27</td></tr>
+                    <tr><td class="gsb-addr__vlan">300</td><td>Serveurs</td><td class="gsb-addr__num">55</td><td class="gsb-addr__net">172.16.0.64/26</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="gsb-addr__note">Chaque sous-réseau est dimensionné au plus juste selon le nombre d'hôtes du service, du /26 pour les plus gros au /28 pour la cafétéria.</p>
+            </div>
+
+            <div class="gsb__side">
+
+              <div class="reveal stagger-1">
+                <p class="gsb-label">Filtrage par ACL</p>
+                <ul class="gsb-rules">
+                  <li><span class="gsb-code">ACL 101</span><span>Direction / DSI (VLAN 20) bloquée vers RH / Compta / Juridique (VLAN 30)</span></li>
+                  <li><span class="gsb-code">ACL 102</span><span>Développement (VLAN 50) bloqué vers Commercial (VLAN 60)</span></li>
+                  <li><span class="gsb-code">ACL 106</span><span>Cafétéria (VLAN 80) : HTTP et FTP refusés vers le serveur intranet</span></li>
+                  <li><span class="gsb-code">ACL 105</span><span>Démonstration (VLAN 200) sans accès Internet, exclue aussi de la traduction NAT</span></li>
+                </ul>
+              </div>
+
+              <div class="reveal stagger-2">
+                <p class="gsb-label">Services configurés</p>
+                <ul class="gsb-services">
+                  <li><strong>Routage inter-VLAN :</strong> sous-interfaces 802.1Q sur le routeur R1</li>
+                  <li><strong>DHCP centralisé :</strong> relais vers le serveur du VLAN Serveurs sur chaque sous-interface</li>
+                  <li><strong>Routage :</strong> RIP v2 sur l'ensemble des sous-réseaux, route par défaut vers le FAI</li>
+                  <li><strong>Accès Internet :</strong> NAT en surcharge (PAT) sur l'interface vers le FAI</li>
+                  <li><strong>Commutation :</strong> VLAN nommés par service, ports d'accès par plages, uplink en trunk</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETS -->
+      <section id="projets" class="section">
+        <div class="container">
+          <p class="s-eyebrow">04 — Réalisations</p>
           <h2 class="s-title">Projets sélectionnés</h2>
           <div class="projects__layout">
 
@@ -336,7 +460,7 @@
       <!-- TABLEAU DE SYNTHÈSE -->
       <section id="synthese" class="section section--darker">
         <div class="container">
-          <p class="s-eyebrow">04 — BTS SIO SESSION 2026</p>
+          <p class="s-eyebrow">05 — BTS SIO session 2026</p>
           <h2 class="s-title">Tableau de synthèse E5</h2>
           <p style="color:var(--muted);margin:1rem 0 2.5rem;font-size:.9rem;font-weight:400;">Réalisations professionnelles et blocs de compétences mis en œuvre, en formation initiale et en milieu professionnel.</p>
 
@@ -425,7 +549,7 @@
       <!-- VEILLE TECHNOLOGIQUE -->
       <section id="veille" class="section">
         <div class="container">
-          <p class="s-eyebrow">05 — Veille technologique</p>
+          <p class="s-eyebrow">06 — Veille technologique</p>
           <h2 class="s-title">La guerre des drones : communications &amp; résilience réseau</h2>
           <p class="veille__intro reveal">
             Le conflit russo-ukrainien est un laboratoire grandeur nature de la guerre électronique. Ce qui m'intéresse en tant qu'étudiant SISR : la <strong>liaison de communication</strong> est devenue l'enjeu central. Brouillage, médium filaire, satellite, maillage, redondance : ce sont des problématiques réseau que je retrouve à échelle d'entreprise.
@@ -515,7 +639,7 @@
       <!-- FORMATION -->
       <section id="formation" class="section section--dark">
         <div class="container">
-          <p class="s-eyebrow">06 — Parcours</p>
+          <p class="s-eyebrow">07 — Parcours</p>
           <h2 class="s-title">Formation</h2>
           <div class="formation__layout">
 
@@ -559,7 +683,7 @@
       <!-- CONTACT -->
       <section id="contact" class="section">
         <div class="container">
-          <p class="s-eyebrow">07 — Disponibilité</p>
+          <p class="s-eyebrow">08 — Disponibilité</p>
           <h2 class="s-title">Contact</h2>
           <div class="contact__layout">
             <div class="reveal">
